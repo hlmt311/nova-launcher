@@ -1,0 +1,28 @@
+<Window x:Class="NovaGamingOptimizer.AudioWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Nova Audio" Height="400" Width="500"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        MouseDown="Window_MouseDown">
+    <Border Background="#0F0F0F" BorderBrush="#2A2A3A" BorderThickness="1" CornerRadius="10" Padding="20">
+        <Grid>
+            <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="0,0,0,14">
+                <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                <StackPanel>
+                    <TextBlock Text="AUDIO OPTIMIZER" FontSize="17" FontWeight="Black" Foreground="#FF4444"/>
+                    <TextBlock Text="Latency - Exclusive - Booster - Popping" FontSize="11" Foreground="#444466" Margin="0,3,0,0"/>
+                </StackPanel>
+                <Button Grid.Column="1" Content="X" Click="Close_Click" Background="Transparent" BorderThickness="0" Foreground="#FF4444" FontSize="14" Cursor="Hand"/>
+            </Grid>
+            <StackPanel Grid.Row="1">
+                <Button Content="Disable Audio Enhancements" Click="Enhance_Click" HorizontalAlignment="Stretch" Margin="0,0,0,8" Background="#00FF88" Foreground="#000000" FontWeight="Bold" BorderThickness="0" Cursor="Hand"><Button.Template><ControlTemplate TargetType="Button"><Border x:Name="bd" Background="{TemplateBinding Background}" CornerRadius="6" Padding="14,10"><ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/></Border><ControlTemplate.Triggers><Trigger Property="IsMouseOver" Value="True"><Setter TargetName="bd" Property="Opacity" Value="0.85"/></Trigger></ControlTemplate.Triggers></ControlTemplate></Button.Template></Button>
+                <Button Content="Enable Exclusive Mode" Click="Exclusive_Click" HorizontalAlignment="Stretch" Margin="0,0,0,8" Background="#001A1A" Foreground="#00D4FF" FontWeight="Bold" BorderBrush="#00D4FF" BorderThickness="1" Cursor="Hand"><Button.Template><ControlTemplate TargetType="Button"><Border x:Name="bd" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="6" Padding="14,10"><ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/></Border><ControlTemplate.Triggers><Trigger Property="IsMouseOver" Value="True"><Setter TargetName="bd" Property="Opacity" Value="0.8"/></Trigger></ControlTemplate.Triggers></ControlTemplate></Button.Template></Button>
+                <Button Content="Audio Booster" Click="Boost_Click" HorizontalAlignment="Stretch" Margin="0,0,0,8" Background="#1A0A00" Foreground="#FFAA00" FontWeight="Bold" BorderBrush="#FFAA00" BorderThickness="1" Cursor="Hand"><Button.Template><ControlTemplate TargetType="Button"><Border x:Name="bd" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="6" Padding="14,10"><ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/></Border><ControlTemplate.Triggers><Trigger Property="IsMouseOver" Value="True"><Setter TargetName="bd" Property="Opacity" Value="0.8"/></Trigger></ControlTemplate.Triggers></ControlTemplate></Button.Template></Button>
+                <Button Content="Restart Audio Service" Click="Restart_Click" HorizontalAlignment="Stretch" Margin="0,0,0,8" Background="#1A001A" Foreground="#FF00FF" FontWeight="Bold" BorderBrush="#FF00FF" BorderThickness="1" Cursor="Hand"><Button.Template><ControlTemplate TargetType="Button"><Border x:Name="bd" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="6" Padding="14,10"><ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/></Border><ControlTemplate.Triggers><Trigger Property="IsMouseOver" Value="True"><Setter TargetName="bd" Property="Opacity" Value="0.8"/></Trigger></ControlTemplate.Triggers></ControlTemplate></Button.Template></Button>
+                <Button Content="Fix Audio Popping" Click="Popping_Click" HorizontalAlignment="Stretch" Background="#001A00" Foreground="#00FF88" FontWeight="Bold" BorderBrush="#00FF88" BorderThickness="1" Cursor="Hand"><Button.Template><ControlTemplate TargetType="Button"><Border x:Name="bd" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="6" Padding="14,10"><ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/></Border><ControlTemplate.Triggers><Trigger Property="IsMouseOver" Value="True"><Setter TargetName="bd" Property="Opacity" Value="0.8"/></Trigger></ControlTemplate.Triggers></ControlTemplate></Button.Template></Button>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
